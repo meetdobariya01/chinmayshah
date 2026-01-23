@@ -31,17 +31,17 @@ const ventures = [
     link: "https://bharatdigitalacademy.com/",
   },
   {
-    name: "Rogue Opportunities",
+    name: "Accomation",
     logo: "https://via.placeholder.com/120x120?text=Rogue+Opportunities",
-    desc: "Venture capital firm investing in disruptive, bold ideas.",
-    link: "https://www.openvc.app/fund/Rogue%20Opportunities%20",
+    desc: "AI accounting automation for businesses",
+    link: "https://accomation.io",
   },
-  {
-    name: "Future Initiatives",
-    logo: "https://via.placeholder.com/120x120?text=Future+Initiatives",
-    desc: "Driving next-gen innovation and ecosystem acceleration programs.",
-    link: "https://futuresinitiative.org",
-  },
+  // {
+  //   name: "Future Initiatives",
+  //   logo: "https://via.placeholder.com/120x120?text=Future+Initiatives",
+  //   desc: "Driving next-gen innovation and ecosystem acceleration programs.",
+  //   link: "https://futuresinitiative.org",
+  // },
 ];
 
 export const Ventures = () => {

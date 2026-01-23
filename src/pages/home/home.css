@@ -84,13 +84,10 @@
   box-shadow: 0 0 40px rgba(0, 255, 255, 0.3);
   animation: float 4s ease-in-out infinite;
 }
-<<<<<<< HEAD
 
-=======
 .text-color{
   color:#00d2ff;
 }
->>>>>>> 96b2263a4f2eb1d97e389e94d7eae6068a916441
 .hero-video {
   width: 100%;
   height: 265px;

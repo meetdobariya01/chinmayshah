@@ -14,10 +14,10 @@ const Events = () => {
 
   // CAROUSEL - 1
   const images1 = [
-    "/images/iim-3.jpeg",
-    "/images/iim-4.jpeg",
     "/images/iim-2.jpg",
     "/images/iim-1.jpg",
+    "/images/iim-3.jpeg",
+    "/images/iim-4.jpeg",
   ];
   const slides1 = [];
   for (let i = 0; i < images1.length; i += 2) {
@@ -26,10 +26,10 @@ const Events = () => {
 
   // CAROUSEL - 2
   const images2 = [
-    "/images/i-hub.jpeg",
     "/images/i-hub-2.jpg",
     "/images/i-hub-3.jpg",
     "/images/i-hub-4.jpeg",
+    "/images/i-hub.jpeg",
   ];
   const slides2 = [];
   for (let i = 0; i < images2.length; i += 2) {
@@ -38,9 +38,9 @@ const Events = () => {
 
   // CAROUSEL - 3
   const images3 = [
+    "/images/e-sell-3.jpeg",
     "/images/e-sell.png",
     "/images/e-cell-2.jpeg",
-    "/images/e-sell-3.jpeg",
     "/images/e-sell-4.jpeg",
   ];
   const slides3 = [];
@@ -62,10 +62,10 @@ const Events = () => {
 
   // CAROUSEL - 5
   const images5 = [
-    "/images/logo-main.jpg",
-    "/images/osw-1.jpg",
     "/images/osw-3.jpg",
     "/images/osw-4.jpg",
+    "/images/logo-main.jpg",
+    "/images/osw-1.jpg",
   ];
   const slides5 = [];
   for (let i = 0; i < images5.length; i += 2) {
@@ -83,21 +83,20 @@ const Events = () => {
     slides6.push(images6.slice(i, i + 2));
   }
 
- 
   return (
     <div>
       {/* Header */}
       <Header />
 
       {/* CENTER BUTTON */}
-      <div className="d-flex justify-content-center">
+      {/* <div className="d-flex justify-content-center">
         <NavLink
           to="/certificate"
           className="btn btn-primary px-4 py-2 mt-3 fw-semibold"
         >
           Get Certificate
         </NavLink>
-      </div>
+      </div> */}
 
       {/* CAROUSEL SECTION-1 */}
       <div className="container my-5 py-5">
@@ -641,10 +640,6 @@ const Events = () => {
         </Modal.Body>
       </Modal>
       {/* caresoul-4 */}
-
-      
-
-      
     </div>
   );
 };

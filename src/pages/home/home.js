@@ -234,7 +234,7 @@ export const Home = () => {
                   rel="noopener noreferrer"
                   className="text-decoration-none text-color "
                 >
-                  <span className="fw-semibold">
+                  <span className="fw-semibold text-color">
                     Chinmay U. Shah
                   </span>
                 </a>{" "}
