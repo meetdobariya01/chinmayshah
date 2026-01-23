@@ -1,0 +1,67 @@
+/* Logo circle */
+.logo-circle {
+  width: 40px;
+  height: 40px;
+  background: linear-gradient(135deg, #a349ff, #7b2fff);
+  border-radius: 50%;
+  box-shadow: 0 4px 12px rgba(123, 47, 255, 0.3);
+}
+
+/* Brand name */
+.brand-name {
+  font-size: 1.3rem;
+  color: #111;
+}
+
+/* Navbar Links */
+.nav-link {
+  color: #111 !important;
+  font-size: 1rem;
+  transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.nav-link:hover {
+  color: #7b2fff !important;
+  transform: scale(1.05);
+}
+
+/* Active NavLink */
+.active-link {
+  color: #7b2fff !important;
+  font-weight: 600;
+}
+
+/* Contact Button */
+.btn-contact {
+  background: linear-gradient(135deg, #a349ff, #7b2fff);
+  color: white !important;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(123, 47, 255, 0.4);
+  transition: all 0.3s ease;
+}
+
+.btn-contact:hover {
+  background: linear-gradient(135deg, #7b2fff, #a349ff);
+  transform: translateY(-2px);
+}
+
+/* Responsive Styles */
+@media (max-width: 992px) {
+  .navbar-nav {
+    background: white;
+    padding: 20px 0;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  }
+
+  .nav-link {
+    padding: 10px 0;
+  }
+
+  .btn-contact {
+    display: block;
+    margin: 10px auto 0;
+  }
+}

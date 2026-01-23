@@ -1,0 +1,47 @@
+.appointment-section {
+  background: linear-gradient(135deg, #0b0f19, #1c2233);
+  background-size: cover;
+  background-attachment: fixed;
+  position: relative;
+  overflow: hidden;
+}
+
+.appointment-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at top left, rgba(0, 255, 255, 0.15), transparent 60%);
+  animation: moveGlow 8s infinite alternate ease-in-out;
+}
+
+@keyframes moveGlow {
+  from {
+    transform: translate(-10px, -10px);
+  }
+  to {
+    transform: translate(10px, 10px);
+  }
+}
+
+.form-control,
+.form-select {
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  box-shadow: 0 0 10px rgba(0, 255, 255, 0.1);
+}
+
+.btn-primary {
+  background: linear-gradient(90deg, #007bff, #00d4ff);
+  border: none;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  background: linear-gradient(90deg, #00b4ff, #00f5ff);
+  box-shadow: 0 0 15px rgba(0, 255, 255, 0.5);
+}

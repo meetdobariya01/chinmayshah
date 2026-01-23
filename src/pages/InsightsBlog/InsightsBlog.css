@@ -1,0 +1,327 @@
+.insights-hero {
+  background: linear-gradient(135deg, #0a192f, #112240, #1b3a57);
+  color: white;
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  padding: 60px 20px;
+}
+
+/* Soft animated glow behind text */
+.hero-glow {
+  width: 300px;
+  height: 300px;
+  background: radial-gradient(circle, rgba(0, 229, 255, 0.25), transparent 70%);
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  filter: blur(80px);
+  z-index: 0;
+}
+
+.insights-hero .container {
+  position: relative;
+  z-index: 2;
+}
+
+.insights-hero h1 {
+  font-size: 2.8rem;
+  letter-spacing: 1px;
+  background: linear-gradient(90deg, #00e5ff, #80d0c7);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.insights-hero p {
+  max-width: 700px;
+  margin: 0 auto;
+  font-weight: 300;
+}
+
+@media (max-width: 768px) {
+  .insights-hero h1 {
+    font-size: 1.8rem;
+  }
+  .insights-hero p {
+    font-size: 1rem;
+  }
+}
+/* secound section */
+
+.blog-section {
+  background: linear-gradient(135deg, #0a192f, #112240, #1b3a57);
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.blog-card {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 20px;
+  overflow: hidden;
+  transition: all 0.4s ease;
+  backdrop-filter: blur(12px);
+}
+
+.blog-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 0 25px rgba(0, 229, 255, 0.25);
+}
+
+.blog-img-wrapper {
+  overflow: hidden;
+  height: 220px;
+}
+
+.blog-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.blog-card:hover .blog-img {
+  transform: scale(1.1);
+}
+
+.blog-content {
+  position: relative;
+  z-index: 2;
+}
+
+.btn-outline-info {
+  border-color: #00e5ff;
+  color: #00e5ff;
+  transition: all 0.3s ease-in-out;
+}
+
+.btn-outline-info:hover {
+  background: #00e5ff;
+  color: #0a192f;
+  box-shadow: 0 0 15px rgba(0, 229, 255, 0.4);
+}
+
+@media (max-width: 768px) {
+  .blog-img-wrapper {
+    height: 180px;
+  }
+
+  .blog-section h2 {
+    font-size: 1.8rem;
+  }
+}
+/* third section */
+.category-section {
+  background: linear-gradient(135deg, #0a192f, #112240, #1b3a57);
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.filter-btn {
+  background: transparent;
+  border: 2px solid #00e5ff;
+  color: #00e5ff;
+  padding: 10px 25px;
+  border-radius: 30px;
+  font-weight: 500;
+  transition: all 0.3s ease-in-out;
+}
+
+.filter-btn:hover {
+  background: #00e5ff;
+  color: #0a192f;
+  box-shadow: 0 0 20px rgba(0, 229, 255, 0.4);
+}
+
+.filter-btn.active {
+  background: #00e5ff;
+  color: #0a192f;
+  box-shadow: 0 0 25px rgba(0, 229, 255, 0.5);
+}
+
+.category-card {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 15px;
+  overflow: hidden;
+  backdrop-filter: blur(10px);
+  transition: all 0.4s ease;
+}
+
+.category-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 0 25px rgba(0, 229, 255, 0.25);
+}
+
+.category-card img {
+  height: 220px;
+  width: 100%;
+  object-fit: cover;
+}
+
+@media (max-width: 768px) {
+  .filter-btn {
+    padding: 8px 18px;
+    font-size: 0.9rem;
+  }
+  .category-card img {
+    height: 180px;
+  }
+}
+/* fifth section */
+
+.newsletter-section {
+  background: linear-gradient(135deg, #0d0d0d, #1c1c1c, #2a2a2a);
+  min-height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.email-input {
+  max-width: 350px;
+  border-radius: 50px;
+  border: 2px solid #555;
+  background: transparent;
+  color: #fff;
+  padding: 12px 20px;
+  transition: all 0.3s ease;
+}
+
+.email-input::placeholder {
+  color: #aaa;
+}
+
+.email-input:focus {
+  border-color: #0d6efd;
+  box-shadow: 0 0 10px rgba(13, 110, 253, 0.3);
+  outline: none;
+}
+
+.subscribe-btn {
+  border-radius: 50px;
+  background: linear-gradient(90deg, #0d6efd, #007bff);
+  border: none;
+  color: #fff;
+  font-size: 1rem;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.subscribe-btn:hover {
+  background: linear-gradient(90deg, #007bff, #0dcaf0);
+}
+/* secound section */
+
+.contact-cards-section {
+  background: linear-gradient(135deg, #0d0d0d, #1c1c1c, #2a2a2a);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Card Styling */
+.contact-card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  transition: all 0.4s ease;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+.contact-card:hover {
+  background: rgba(13, 110, 253, 0.1);
+  transform: translateY(-8px);
+  box-shadow: 0 8px 25px rgba(13, 110, 253, 0.3);
+}
+
+.contact-icon {
+  font-size: 2.5rem;
+  color: #0d6efd;
+  transition: color 0.3s ease;
+}
+
+.contact-card:hover .contact-icon {
+  color: #0dcaf0;
+}
+/* third section */
+
+.contact-form-section {
+  background: linear-gradient(135deg, #0d0d0d, #1c1c1c, #2a2a2a);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+.contact-form {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(12px);
+  box-shadow: 0 4px 25px rgba(0, 0, 0, 0.4);
+  transition: all 0.4s ease;
+}
+
+.contact-form:hover {
+  box-shadow: 0 8px 35px rgba(13, 110, 253, 0.4);
+}
+
+.form-input {
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #fff;
+  padding: 12px 15px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.form-input:focus {
+  border-color: #0d6efd;
+  box-shadow: 0 0 8px rgba(13, 110, 253, 0.5);
+  outline: none;
+}
+
+.form-input::placeholder {
+  color: #bbb;
+}
+
+.btn-primary {
+  background: linear-gradient(90deg, #0d6efd, #007bff);
+  border: none;
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  background: linear-gradient(90deg, #007bff, #0dcaf0);
+}
+/* forth section */
+
+.direct-contact-section {
+  background: linear-gradient(135deg, #0d0d0d, #1a1a1a, #2a2a2a);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Email link */
+.email-text {
+  font-size: 1.1rem;
+  color: #0dcaf0;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.email-text:hover {
+  color: #0d6efd;
+}
+
+/* Social Icons */
+.social-icon {
+  color: #fff;
+  font-size: 1.8rem;
+  transition: all 0.3s ease;
+}
+
+.social-icon:hover {
+  transform: translateY(-4px);
+  color: #0dcaf0;
+}
