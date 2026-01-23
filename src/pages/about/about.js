@@ -63,18 +63,18 @@ const timelineData = [
   },
   {
     icon: <FaLightbulb />,
-    title: "Startunico",
-    text: "Pioneered creative startup collaborations and innovative product ideas.",
+    title: "HorseTech Analytics",
+    text: "Technology-driven company building secure, efficient, and future-ready digital products.",
   },
   {
     icon: <FaHandshake />,
-    title: "Rogue Opportunities",
-    text: "Forged powerful partnerships and expanded into global ventures.",
+    title: "Starlight Tech Labs",
+    text: "Innovative IT solutions delivering scalable software, automation, and digital transformation.",
   },
   {
     icon: <FaRobot />,
-    title: "AI Governance",
-    text: "Shaping responsible and ethical AI frameworks for the future.",
+    title: "Accomation",
+    text: "AI-powered accounting automation platform simplifying bookkeeping, compliance, and financial workflows.",
   },
 ];
 export const About = () => {
@@ -169,7 +169,7 @@ export const About = () => {
             whileInView={{ scale: 1 }}
             transition={{ delay: 0.3, duration: 0.8 }}
           >
-            “Technology isn’t just transforming industries — it’s redefining how
+            “Technology isn’t just transforming industries - it’s redefining how
             humanity evolves.”
           </motion.h2>
 

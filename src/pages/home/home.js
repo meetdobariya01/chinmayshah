@@ -58,9 +58,9 @@ const testimonials = [
     name: "Rahul Mehta",
     title: "Investor, Angel Network",
     quote:
-      "A true tech evangelist — his ability to bridge technology and human potential is unmatched.",
+      "A true tech evangelist - his ability to bridge technology and human potential is unmatched.",
     img: "./images/t-2.jpg",
-  },   
+  },
   {
     name: "Sneha Rao",
     title: "CEO, Bliss Tree",
@@ -151,7 +151,7 @@ export const Home = () => {
                   onClick={() =>
                     window.open(
                       "https://www.linkedin.com/in/chinmayushah",
-                      "_blank"
+                      "_blank",
                     )
                   }
                 >
@@ -228,10 +228,17 @@ export const Home = () => {
               <h2 className="fw-bold mb-3 text-gradient">Quick Intro</h2>
               <p className="lead text-light">
                 I’m{" "}
-                <span className="fw-semibold text-primary ">
-                  Chinmay U. Shah
-                </span>{" "}
-                — helping founders and organizations harness the power of
+                <a
+                  href="https://www.linkedin.com/in/chinmayushah"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-decoration-none text-color "
+                >
+                  <span className="fw-semibold">
+                    Chinmay U. Shah
+                  </span>
+                </a>{" "}
+                - helping founders and organizations harness the power of
                 technology and innovation. I bridge creativity, business, and
                 tech to bring visionary ideas to life.
               </p>

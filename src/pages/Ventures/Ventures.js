@@ -13,10 +13,10 @@ const ventures = [
     link: "https://startupsteroid.in",
   },
   {
-    name: "Startunico",
+    name: "Starlight Tech Labs",
     logo: "https://via.placeholder.com/120x120?text=Startunico",
-    desc: "Connecting startups with mentors, investors, and innovation ecosystems.",
-    link: "https://starunico.com/who-we-are",
+    desc: "Innovative IT solutions driving transformation",
+    link: "https://starlighttechlabs.com",
   },
   {
     name: "Crescent Electronics",
@@ -25,9 +25,9 @@ const ventures = [
     link: "https://crescentworld.com",
   },
   {
-    name: "Bharat Digital University",
+    name: "HorseTech Analytics",
     logo: "https://via.placeholder.com/120x120?text=BDU",
-    desc: "Shaping India’s digital future through education and innovation.",
+    desc: "Technology-driven company building future-ready products.",
     link: "https://bharatdigitalacademy.com/",
   },
   {
