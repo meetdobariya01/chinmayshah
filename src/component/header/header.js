@@ -54,10 +54,10 @@ export const Header = () => {
         >
           <ul className="navbar-nav align-items-center">
             {[
-              { name: "Home", path: "/" },
+              // { name: "Home", path: "/" },
               { name: "About", path: "/about" },
-              { name: "Speaking", path: "/Speaking" },
               { name: "Ventures", path: "/Ventures" },
+              { name: "Speaking", path: "/Speaking" },
               { name: "Insights ", path: "/Insights " },
               { name: "Events ", path: "/Events " },
               { name: "Contact ", path: "/Contact " },
