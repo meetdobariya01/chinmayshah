@@ -56,7 +56,7 @@ export const Header = () => {
             {[
               { name: "Home", path: "/" },
               { name: "About", path: "/about" },
-              { name: "Speaker", path: "/Speaking" },
+              { name: "Speaking", path: "/Speaking" },
               { name: "Ventures", path: "/Ventures" },
               { name: "Insights ", path: "/Insights " },
               { name: "Events ", path: "/Events " },

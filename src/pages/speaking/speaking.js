@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import { useEffect } from "react";
+import { useLocation } from "react-router-dom";
 import Header from "../../component/header/header";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { motion } from "framer-motion";
@@ -10,23 +12,29 @@ const topics = [
   {
     title: "AI Beyond Buzzwords",
     summary:
-      "Exploring real-world applications of artificial intelligence that drive impact.",
+      "Exploring real-world applications of artificial intelligence that drive meaningful impact across industries.",
   },
   {
     title: "Startup Curation",
     summary:
-      "Helping investors and accelerators discover high-potential founders and ideas.",
+      "Helping investors, accelerators, and ecosystems discover high-potential founders and transformative ideas.",
   },
   {
     title: "Digital India 2030",
     summary:
-      "Envisioning the next decade of India’s digital and innovation revolution.",
+      "Envisioning the next decade of India’s digital transformation and innovation-driven economy.",
   },
   {
     title: "Family Offices & Founders",
     summary:
-      "Bridging legacy wealth with next-generation entrepreneurial energy.",
+      "Bridging legacy wealth with next-generation entrepreneurial energy to unlock new investment opportunities.",
   },
+  {
+    title: "Startup Costing",
+    summary:
+      "How founders can structure costs intelligently, avoid early financial pitfalls, and build scalable, financially sustainable startups.",
+
+  }
 ];
 
 const engagements = [
@@ -75,14 +83,11 @@ export const Speaking = () => {
     setLoading(true);
 
     try {
-      const response = await fetch(
-        "http://localhost:5000/api/speaking",
-        {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify(formData),
-        }
-      );
+      const response = await fetch("http://localhost:5000/api/speaking", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      });
 
       const data = await response.json();
 
@@ -105,6 +110,15 @@ export const Speaking = () => {
       setLoading(false);
     }
   };
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: "instant", // or "smooth"
+    });
+  }, [pathname]);
 
   return (
     <div>
@@ -140,12 +154,8 @@ export const Speaking = () => {
             {topics.map((topic, index) => (
               <div className="col-md-6 mb-4" key={index}>
                 <div className="topic-card p-4 h-100 rounded-4 shadow-sm">
-                  <h4 className="fw-semibold text-white mb-3">
-                    {topic.title}
-                  </h4>
-                  <p className="text-light small mb-0">
-                    {topic.summary}
-                  </p>
+                  <h4 className="fw-semibold text-white mb-3">{topic.title}</h4>
+                  <p className="text-light small mb-0">{topic.summary}</p>
                 </div>
               </div>
             ))}
@@ -200,7 +210,7 @@ export const Speaking = () => {
         <div className="container">
           <motion.form
             className="contact-form mx-auto p-4 rounded-4 shadow-lg"
-            onSubmit={handleSubmit}   // ✅ connected
+            onSubmit={handleSubmit} // ✅ connected
           >
             <div className="row">
               <div className="col-md-6 mb-3">

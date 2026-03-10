@@ -529,3 +529,50 @@
     margin: 2px 6px;
   }
 }
+.collaboration-section{
+padding:100px 0;
+background:linear-gradient(135deg,#141e30,#243b55);
+color:white;
+}
+
+.collab-title{
+font-size:42px;
+font-weight:700;
+margin-bottom:20px;
+}
+
+.collab-text{
+max-width:700px;
+margin:auto;
+opacity:.85;
+font-size:18px;
+}
+
+.collab-list{
+max-width:700px;
+margin:50px auto;
+padding:0;
+list-style:none;
+}
+
+.collab-list li{
+background:rgba(255,255,255,0.08);
+padding:18px 25px;
+margin-bottom:15px;
+border-radius:12px;
+display:flex;
+align-items:center;
+font-size:18px;
+transition:all .4s;
+}
+
+.collab-list li:hover{
+transform:translateX(10px);
+background:rgba(255,255,255,0.15);
+}
+
+.collab-icon{
+font-size:22px;
+margin-right:15px;
+color:#00e0ff;
+}

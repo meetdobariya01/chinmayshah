@@ -1,4 +1,5 @@
-import React from "react";
+import { useEffect } from "react";
+import { useLocation } from "react-router-dom";
 import { motion } from "framer-motion";
 import { Button } from "react-bootstrap";
 import "./home.css";
@@ -8,6 +9,10 @@ import {
   FaRocket,
   FaLightbulb,
   FaMicrophoneAlt,
+  FaUsers,
+  FaHandshake,
+  FaUserTie,
+  FaBrain,
 } from "react-icons/fa";
 import { Carousel, Card, Container } from "react-bootstrap";
 import Footer from "../../component/footer/footer";
@@ -18,25 +23,37 @@ const pillars = [
   {
     icon: <FaLightbulb />,
     title: "Tech Evangelism",
-    desc: "Inspiring and educating people about emerging technologies to accelerate innovation and impact.",
+    desc: "I help organizations and communities understand the transformative potential of emerging technologies such as Artificial Intelligence, automation, and digital platforms, enabling them to innovate with clarity and confidence.",
     delay: 0.2,
   },
   {
     icon: <FaRocket />,
-    title: "Startup Mentorship",
-    desc: "Helping founders navigate the startup ecosystem with practical insights and hands-on guidance.",
+    title: "Startup Mentorship & Ecosystem Building",
+    desc: "I work closely with founders, incubators, universities, and investors to help startups navigate product, strategy, scaling, and ecosystem partnerships.",
     delay: 0.4,
   },
   {
     icon: <FaRobot />,
     title: "AI Strategy & Governance",
-    desc: "Designing responsible AI frameworks that align technology with ethics and business success.",
+    desc: "I advise organizations on implementing responsible AI frameworks that align innovation with governance, ethics, and long-term business value.",
     delay: 0.6,
   },
   {
     icon: <FaMicrophoneAlt />,
     title: "Speaking & Thought Leadership",
-    desc: "Delivering engaging talks and sessions that inspire leaders to shape the future with purpose.",
+    desc: "Through keynote talks, workshops, and global forums, I share insights on AI, innovation, entrepreneurship, and the future of technology.",
+    delay: 0.8,
+  },
+  {
+    icon: <FaUsers />,
+    title: "Speaking & Thought Leadership",
+    desc: "Through keynote talks, workshops, and global forums, I share insights on AI, innovation, entrepreneurship, and the future of technology.",
+    delay: 0.8,
+  },
+  {
+    icon: <FaHandshake />,
+    title: "Collaborations & Ecosystem Engagement",
+    desc: "I actively collaborate with leading innovation ecosystems, academic institutions, and entrepreneur networks.",
     delay: 0.8,
   },
 ];
@@ -44,15 +61,21 @@ const logos = [
   { name: "TiE", img: "/images/tie.png" },
   { name: "IIM Ranchi", img: "/images/iim.png" },
   { name: "XLRI", img: "/images/xiri.png" },
-  { name: "Startup Game Changer", img: "/images/startup.png" },
+  { name: "GCCI", img: "/images/gcci.png" },
+  { name: "FICCI", img: "/images/ficci.png" },
+  { name: "AHMEDABAD-STUDIO", img: "/images/ahmedabad-studio.webp" },
+  { name: "I-HUB", img: "/images/i-hub.png" },
+  { name: "GUSEC", img: "/images/gusec.png" },
+  { name: "E-CHAI", img: "/images/e-chai.png" },
 ];
 const testimonials = [
   {
     name: "Ananya Patel",
     title: "Founder, InnovX Labs",
     quote:
-      "Chinmay’s insights into AI strategy reshaped our startup’s vision. His mentorship gave us clarity and confidence to scale.",
+      "Chinmay’s ability to connect technology, strategy, and startup thinking is exceptional. His guidance helped us rethink our AI roadmap and unlock new growth opportunities.",
     img: "./images/t-1.jpg",
+    company: "Founder, InnovX Labs",
   },
   {
     name: "Rahul Mehta",
@@ -91,6 +114,16 @@ const testimonials = [
   // },
 ];
 export const Home = () => {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: "instant", // or "smooth"
+    });
+  }, [pathname]);
+
   return (
     <div>
       {/* Header */}
@@ -111,7 +144,7 @@ export const Home = () => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 1 }}
               >
-                Crafting the Future at the Intersection of <br />
+                Building the Future at the Intersection of <br />
                 <span className="text-gradient">
                   Technology, Startups & Human Potential.
                 </span>
@@ -123,9 +156,9 @@ export const Home = () => {
                 animate={{ opacity: 1 }}
                 transition={{ delay: 0.5, duration: 1 }}
               >
-                <span>Tech Evangelist</span> | <span>Startup Curator</span>{" "}
+                <span>AI Strategist</span> | <span>Tech Evangelist</span> |{" "}
                 <br className="d-lg-none" />
-                <span>AI Speaker</span> | <span>Mentor</span>
+                <span>Startup Ecosystem Builder</span> | <span>Speaker</span>
               </motion.p>
 
               <motion.div
@@ -225,7 +258,9 @@ export const Home = () => {
               transition={{ duration: 1 }}
               viewport={{ once: true }}
             >
-              <h2 className="fw-bold mb-3 text-gradient">Quick Intro</h2>
+              <h2 className="fw-bold mb-3 text-gradient">
+                Transforming Ideas into Innovation
+              </h2>
               <p className="lead text-light">
                 I’m{" "}
                 <a
@@ -238,9 +273,16 @@ export const Home = () => {
                     Chinmay U. Shah
                   </span>
                 </a>{" "}
-                - helping founders and organizations harness the power of
-                technology and innovation. I bridge creativity, business, and
-                tech to bring visionary ideas to life.
+                - a technology strategist, startup ecosystem builder, and
+                investor helping founders, institutions, and organizations
+                leverage emerging technologies to build the future.
+              </p>
+
+              <p className="lead text-light">
+                For over two decades, I have worked at the intersection of
+                technology, entrepreneurship, and innovation, guiding startups,
+                mentoring founders, and enabling organizations to adopt
+                transformative technologies responsibly and strategically.
               </p>
             </motion.div>
           </div>
@@ -264,7 +306,7 @@ export const Home = () => {
             {pillars.map((pillar, index) => (
               <motion.div
                 key={index}
-                className="col-md-6 col-lg-3"
+                className="col-md-6 col-lg-4"
                 initial={{ opacity: 0, y: 60 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ delay: pillar.delay, duration: 0.8 }}
@@ -324,7 +366,7 @@ export const Home = () => {
             transition={{ duration: 0.7 }}
             viewport={{ once: true }}
           >
-            What People Say
+            What Founders & Leaders Say
           </motion.h2>
 
           <Carousel indicators={false} interval={4000} pause={false}>
@@ -351,9 +393,12 @@ export const Home = () => {
                       <Card.Title className="fw-bold text-white">
                         {testimonial.name}
                       </Card.Title>
-                      <Card.Subtitle className="text-muted small">
+                      {/* <Card.Subtitle className="text-muted small">
                         {testimonial.title}
-                      </Card.Subtitle>
+                      </Card.Subtitle> */}
+                      <Card.Text className="text-white small">
+                        {testimonial.company}
+                      </Card.Text>
                     </Card.Body>
                   </Card>
                 </motion.div>
@@ -367,15 +412,48 @@ export const Home = () => {
       <section className="cta-banner py-5">
         <Container className="text-center">
           {/* Headline */}
-          <motion.h2
-            className="fw-bold display-6 text-gradient mb-4"
-            initial={{ opacity: 0, y: 50 }}
+          <motion.div
+            initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+            className="text-center mb-5"
           >
-            Let’s Build the Future Together
-          </motion.h2>
+            <h2 className="collab-title">Let's Build the Future Together </h2>
+
+            <p className="collab-text">
+              Whether you are a founder, organization, university, or innovation
+              community, if you are building something meaningful with
+              technology, let’s collaborate.
+            </p>
+          </motion.div>
+
+          {/* Ordered List */}
+          <motion.ol
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ delay: 0.2 }}
+            className="collab-list"
+          >
+            <li>
+              <FaMicrophoneAlt className="collab-icon" />
+              Keynote talks & conferences
+            </li>
+
+            <li>
+              <FaUserTie className="collab-icon" />
+              Startup mentorship & advisory
+            </li>
+
+            <li>
+              <FaBrain className="collab-icon" />
+              AI strategy & governance consulting
+            </li>
+
+            <li>
+              <FaHandshake className="collab-icon" />
+              Innovation ecosystem collaborations
+            </li>
+          </motion.ol>
 
           {/* Buttons */}
           <motion.div
@@ -394,14 +472,14 @@ export const Home = () => {
             >
               Contact Me
             </Button>
-            <Button
+            {/* <Button
               variant="outline-light"
               size="lg"
               className="cta-btn btn-outline-glow"
               href="#partner"
             >
               Partner With Me
-            </Button>
+            </Button> */}
           </motion.div>
         </Container>
       </section>
