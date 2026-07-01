@@ -1,0 +1,189 @@
+.brand-section {
+  overflow: hidden;
+  background: #fff;
+}
+
+/* IMAGE */
+
+.image-box {
+  height: 520px;
+  overflow: hidden;
+  position: relative;
+}
+
+.image-box img {
+  width: 100%;
+  height: 100%;
+  /* object-fit: cover; */
+  transition: 1.2s ease;
+}
+
+.image-box:hover img {
+  transform: scale(1.1);
+}
+
+/* TEXT */
+
+.brand-text {
+  height: 520px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  padding: 90px;
+
+  position: relative;
+  overflow: hidden;
+}
+
+.dark-bg {
+  background: #06261d;
+  color: #fff;
+}
+
+.light-bg {
+  background: #f7f4ed;
+  color: #111;
+}
+
+.small-title {
+  font-size: 15px;
+  letter-spacing: 3px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.brand-text h2 {
+  font-size: 52px;
+  font-weight: 700;
+  margin-bottom: 30px;
+  line-height: 1.1;
+}
+
+.brand-text p {
+  font-size: 18px;
+  line-height: 1.9;
+  /* max-width: 520px; */
+  margin-bottom: 35px;
+}
+
+.premium-btn {
+  width: 190px;
+  height: 58px;
+
+  background: transparent;
+
+  border: 2px solid #d5b36a;
+
+  color: #d5b36a;
+
+  font-weight: 600;
+
+  transition: 0.4s;
+}
+
+.premium-btn:hover {
+  background: #d5b36a;
+  color: #000;
+  transform: translateY(-5px);
+}
+
+.dark {
+  border-color: #06261d;
+  color: #06261d;
+}
+
+.dark:hover {
+  background: #06261d;
+  color: #fff;
+}
+
+/* Floating animation */
+
+.image-box::after {
+  content: "";
+
+  position: absolute;
+
+  width: 350px;
+  height: 350px;
+
+  border-radius: 50%;
+
+  background: rgba(255, 255, 255, 0.08);
+
+  top: -120px;
+  right: -120px;
+
+  animation: float 8s infinite ease-in-out;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(30px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+/* Responsive */
+
+@media (max-width: 992px) {
+  .brand-text {
+    padding: 60px 45px;
+    height: 420px;
+  }
+
+  .image-box {
+    height: 420px;
+  }
+
+  .brand-text h2 {
+    font-size: 38px;
+  }
+}
+
+@media (max-width: 768px) {
+  .brand-text {
+    height: auto;
+    padding: 55px 30px;
+  }
+
+  .image-box {
+    height: 330px;
+  }
+
+  .brand-text h2 {
+    font-size: 32px;
+  }
+
+  .brand-text p {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 576px) {
+  .brand-text {
+    padding: 45px 25px;
+  }
+
+  .brand-text h2 {
+    font-size: 28px;
+  }
+
+  .image-box {
+    height: 260px;
+  }
+
+  .premium-btn {
+    width: 170px;
+    height: 52px;
+  }
+}

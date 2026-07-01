@@ -57,8 +57,9 @@ export const Header = () => {
               // { name: "Home", path: "/" },
               { name: "About", path: "/about" },
               { name: "Ventures", path: "/Ventures" },
-              { name: "Speaking", path: "/Speaking" },
-              { name: "Insights ", path: "/Insights " },
+              { name: "Workshop", path: "/Speaking" },
+              { name: "Business Automation ", path: "/Insights " },
+              { name: "Investors ", path: "/Links " },
               { name: "Events ", path: "/Events " },
               { name: "Contact ", path: "/Contact " },
             ].map((item) => (

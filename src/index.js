@@ -1,21 +1,22 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
+import React from "react";
+import ReactDOM from "react-dom/client";
+import "./index.css";
 // import App from './App';
-import reportWebVitals from './reportWebVitals';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import Home from './pages/home/home';
+import reportWebVitals from "./reportWebVitals";
+import "bootstrap/dist/css/bootstrap.min.css";
+import Home from "./pages/home/home";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import About from './pages/about/about';
-import Speaking from './pages/speaking/speaking';
-import Ventures from './pages/Ventures/Ventures';
-import InsightsBlog from './pages/InsightsBlog/InsightsBlog';
-import Contact from './pages/Contact/Contact';
-import Appoiment from './pages/appoiment/appoiment';
-import Events from './pages/events/events';
-import Certificate from './component/certificate/certificate';
+import About from "./pages/about/about";
+import Speaking from "./pages/speaking/speaking";
+import Ventures from "./pages/Ventures/Ventures";
+import InsightsBlog from "./pages/InsightsBlog/InsightsBlog";
+import Contact from "./pages/Contact/Contact";
+import Appoiment from "./pages/appoiment/appoiment";
+import Events from "./pages/events/events";
+import Certificate from "./component/certificate/certificate";
+import Links from "./pages/links/links";
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <Router basename="/">
     <Routes>
@@ -24,15 +25,13 @@ root.render(
       <Route path="speaking" element={<Speaking />} />
       <Route path="Ventures" element={<Ventures />} />
       <Route path="Insights" element={<InsightsBlog />} />
-      <Route path="contact" element={<Contact/>} />
-      <Route path="appoiment" element={<Appoiment/>} />
-      <Route path="certificate" element={<Certificate/>} />
-      <Route path="events" element={<Events/>} />
-
-
-      
+      <Route path="contact" element={<Contact />} />
+      <Route path="appoiment" element={<Appoiment />} />
+      <Route path="certificate" element={<Certificate />} />
+      <Route path="events" element={<Events />} />
+      <Route path="links" element={<Links />} />
     </Routes>
-  </Router>
+  </Router>,
 );
 
 // If you want to start measuring performance in your app, pass a function
