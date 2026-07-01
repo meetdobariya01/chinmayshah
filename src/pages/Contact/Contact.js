@@ -56,7 +56,7 @@ const Contact = () => {
 
     try {
       const response = await fetch(
-        "http://localhost:5000/api/contact", // 🔁 replace after deploy
+        "https://api.chinmayushah.com/api/contact", // 🔁 replace after deploy
         {
           method: "POST",
           headers: { "Content-Type": "application/json" },
