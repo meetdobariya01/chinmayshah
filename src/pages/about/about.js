@@ -143,7 +143,7 @@ export const About = () => {
             Journey Timeline
           </motion.h2>
 
-          <div className="timeline-container d-flex flex-wrap justify-content-center">
+          <div className="timeline-container-aboutus d-flex flex-wrap justify-content-center">
             {timelineData.map((item, index) => (
               <motion.div
                 className="timeline-item text-white text-center p-3"
@@ -229,8 +229,8 @@ export const About = () => {
               >
                 <div className="expertise-card p-4 h-100">
                   <div className="expertise-icon mb-3 mx-auto">{item.icon}</div>
-                  <h5 className="fw-semibold text-dark mb-2">{item.title}</h5>
-                  <p className="text-muted small">{item.text}</p>
+                  <h5 className="fw-semibold mb-2">{item.title}</h5>
+                  <p className=" small">{item.text}</p>
                 </div>
               </motion.div>
             ))}

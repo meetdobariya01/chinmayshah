@@ -99,7 +99,7 @@ export const Speaking = () => {
     setLoading(true);
 
     try {
-      const response = await fetch("http://localhost:5000/api/speaking", {
+      const response = await fetch("https://api.chinmayushah.com/api/speaking", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),

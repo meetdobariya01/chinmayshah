@@ -136,7 +136,7 @@
   overflow: hidden;
 }
 
-.timeline-container {
+.timeline-container-aboutus {
   position: relative;
   display: flex;
   flex-wrap: wrap;
@@ -192,7 +192,7 @@
 
 /* Vertical Layout (Mobile) */
 @media (max-width: 768px) {
-  .timeline-container {
+  .timeline-container-aboutus {
     flex-direction: column;
     align-items: center;
   }

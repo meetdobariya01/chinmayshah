@@ -1,67 +1,301 @@
-/* Logo circle */
-.logo-circle {
-  width: 40px;
-  height: 40px;
-  background: linear-gradient(135deg, #a349ff, #7b2fff);
-  border-radius: 50%;
-  box-shadow: 0 4px 12px rgba(123, 47, 255, 0.3);
+.premium-navbar {
+  position: sticky;
+  top: 0;
+  z-index: 9999;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.94);
+  border-bottom: 1px solid rgba(6, 38, 29, 0.08);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
 }
-
-/* Brand name */
-.brand-name {
-  font-size: 1.3rem;
-  color: #111;
+.premium-nav-container {
+  min-height: 88px;
+  padding: 0 55px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+} /* ===================================================== LOGO ===================================================== */
+.premium-logo {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  position: relative;
+  z-index: 10001;
 }
-
-/* Navbar Links */
-.nav-link {
-  color: #111 !important;
-  font-size: 1rem;
-  transition: color 0.3s ease, transform 0.2s ease;
+.premium-logo-img {
+  width: auto;
+  height: auto;
+  display: block;
+  object-fit: contain;
+  transition: transform 0.4s ease;
 }
-
-.nav-link:hover {
-  color: #7b2fff !important;
-  transform: scale(1.05);
+.premium-logo:hover .premium-logo-img {
+  transform: scale(1.03);
+} /* ===================================================== NAVIGATION ===================================================== */
+.premium-navigation {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 45px;
 }
-
-/* Active NavLink */
-.active-link {
-  color: #7b2fff !important;
+.premium-nav-list {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.premium-nav-item {
+  position: relative;
+} /* ===================================================== NAV LINKS ===================================================== */
+.premium-nav-link {
+  position: relative;
+  display: flex;
+  align-items: center;
+  /* gap: 8px; */
+  padding: 32px 13px;
+  color: #1a1a1a;
+  text-decoration: none;
+  font-size: 16px;
   font-weight: 600;
+  letter-spacing: 0.3px;
+  transition:
+    color 0.35s ease,
+    transform 0.35s ease;
 }
-
-/* Contact Button */
-.btn-contact {
-  background: linear-gradient(135deg, #a349ff, #7b2fff);
-  color: white !important;
+.premium-nav-link:hover {
+  color: #2c5364;
+}
+.nav-number {
+  position: absolute;
+  top: 16px;
+  left: 13px;
+  font-size: 7px;
+  letter-spacing: 1.5px;
+  color: #2c5364;
+  opacity: 0;
+  transform: translateY(5px);
+  transition:
+    opacity 0.3s ease,
+    transform 0.3s ease;
+}
+.nav-arrow {
+  font-size: 10px;
+  opacity: 0;
+  transform: translate(-4px, 4px);
+  transition:
+    opacity 0.3s ease,
+    transform 0.3s ease;
+}
+.premium-nav-link:hover .nav-number,
+.premium-active .nav-number {
+  opacity: 1;
+  transform: translateY(0);
+}
+.premium-nav-link:hover .nav-arrow {
+  opacity: 1;
+  transform: translate(0, 0);
+} /* ===================================================== ACTIVE LINK ===================================================== */
+.premium-active {
+  color: #06261d !important;
+}
+.premium-active::after {
+  content: "";
+  position: absolute;
+  left: 13px;
+  right: 13px;
+  bottom: 19px;
+  height: 2px;
+  background: #d5b36a;
+  transform-origin: left;
+  animation: activeLine 0.45s ease forwards;
+}
+@keyframes activeLine {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
+} /* ===================================================== CONTACT BUTTON ===================================================== */
+.premium-nav-cta {
+  display: flex;
+  align-items: center;
+}
+.premium-contact-btn {
+  min-width: 165px;
+  height: 48px;
+  padding: 0 7px 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  text-decoration: none;
+  color: #06231d;
+  background: transparent;
+  border: 1px solid #06261d;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  transition: all 0.4s ease;
+}
+.premium-contact-btn:hover {
+  color: #06261d;
+  /* background: #2c5364; */
   border: none;
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(123, 47, 255, 0.4);
-  transition: all 0.3s ease;
 }
-
-.btn-contact:hover {
-  background: linear-gradient(135deg, #7b2fff, #a349ff);
-  transform: translateY(-2px);
+.contact-arrow {
+  width: 34px;
+  height: 34px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #d5b36a;
+  color: #06261d;
+  font-size: 17px;
+  transition: transform 0.4s ease;
 }
-
-/* Responsive Styles */
-@media (max-width: 992px) {
-  .navbar-nav {
-    background: white;
-    padding: 20px 0;
-    border-radius: 10px;
-    text-align: center;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+.premium-contact-btn:hover .contact-arrow {
+  transform: rotate(45deg);
+} /* ===================================================== MOBILE TOGGLER ===================================================== */
+.premium-toggler {
+  display: none;
+  width: 48px;
+  height: 48px;
+  padding: 0;
+  border: 1px solid rgba(6, 38, 29, 0.2);
+  background: transparent;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 6px;
+  cursor: pointer;
+  position: relative;
+  z-index: 10001;
+}
+.premium-toggler span {
+  width: 20px;
+  height: 1.5px;
+  background: #06261d;
+  transition: all 0.35s ease;
+}
+.premium-toggler.menu-open span:first-child {
+  transform: translateY(3.75px) rotate(45deg);
+}
+.premium-toggler.menu-open span:last-child {
+  transform: translateY(-3.75px) rotate(-45deg);
+} /* ===================================================== LARGE LAPTOP ===================================================== */
+@media (max-width: 1350px) {
+  .premium-nav-container {
+    padding: 0 35px;
   }
-
-  .nav-link {
-    padding: 10px 0;
+  .premium-navigation {
+    gap: 20px;
   }
-
-  .btn-contact {
+  .premium-nav-list {
+    gap: 0;
+  }
+  .premium-nav-link {
+    padding-left: 9px;
+    padding-right: 9px;
+    /* font-size: 12px; */
+  }
+  .premium-active::after {
+    left: 9px;
+    right: 9px;
+  }
+} /* ===================================================== TABLET ===================================================== */
+@media (max-width: 1100px) {
+  .premium-nav-container {
+    min-height: 78px;
+    padding: 0 25px;
+  }
+  .premium-logo-img {
+    width: auto;
+  }
+  .premium-toggler {
+    display: flex;
+  }
+  .premium-navigation {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
     display: block;
-    margin: 10px auto 0;
+    padding: 0 25px;
+    background: rgba(255, 255, 255, 0.98);
+    border-bottom: 1px solid rgba(6, 38, 29, 0.08);
+    backdrop-filter: blur(20px);
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    visibility: hidden;
+    transition:
+      max-height 0.5s ease,
+      opacity 0.35s ease,
+      visibility 0.35s ease;
+  }
+  .premium-navigation.navigation-open {
+    max-height: 700px;
+    opacity: 1;
+    visibility: visible;
+  }
+  .premium-nav-list {
+    display: block;
+    padding: 15px 0;
+  }
+  .premium-nav-item {
+    border-bottom: 1px solid rgba(6, 38, 29, 0.08);
+  }
+  .premium-nav-link {
+    min-height: 58px;
+    padding: 18px 10px;
+    font-size: 14px;
+  }
+  .nav-number {
+    position: static;
+    opacity: 1;
+    transform: none;
+    width: 25px;
+    font-size: 8px;
+  }
+  .nav-arrow {
+    margin-left: auto;
+    opacity: 0.5;
+    transform: none;
+  }
+  .premium-active::after {
+    left: 10px;
+    right: auto;
+    width: 35px;
+    bottom: 4px;
+  }
+  .premium-nav-cta {
+    padding: 10px 0 25px;
+  }
+  .premium-contact-btn {
+    width: 100%;
+    justify-content: space-between;
+  }
+} /* ===================================================== MOBILE ===================================================== */
+@media (max-width: 576px) {
+  .premium-nav-container {
+    min-height: 72px;
+    padding: 0 18px;
+  }
+  .premium-logo-img {
+    width: auto;
+  }
+  .premium-toggler {
+    width: 44px;
+    height: 44px;
+  }
+  .premium-navigation {
+    padding: 0 18px;
+  }
+  .premium-nav-link {
+    min-height: 55px;
+    font-size: 13px;
   }
 }
