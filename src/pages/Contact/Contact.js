@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React, { useState, useEffect  } from "react";
+import { useLocation } from "react-router-dom";
 import Header from "../../component/header/header";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { motion } from "framer-motion";
@@ -37,6 +38,15 @@ const contactItems = [
 ];
 
 const Contact = () => {
+   const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: "instant", // or "smooth"
+    });
+  }, [pathname]);
   const [formData, setFormData] = useState({
     name: "",
     email: "",

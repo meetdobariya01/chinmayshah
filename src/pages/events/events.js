@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import { useLocation } from "react-router-dom";
 import Header from "../../component/header/header";
 import { Modal } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -6,11 +7,43 @@ import "bootstrap/dist/css/bootstrap.min.css";
 const Events = () => {
   const [modalShow, setModalShow] = useState(false);
   const [currentImage, setCurrentImage] = useState("");
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: "instant", // or "smooth"
+    });
+  }, [pathname]);
 
   // ============================================
   // ALL EVENT DETAILS
   // ============================================
   const events = [
+    {
+      id: "event-9",
+      title: "E-Cell, Nirma University",
+      description:
+        "Build Your Startup 8.0 empowered aspiring entrepreneurs through ideation, mentoring, business modelling and pitching, transforming innovative ideas into impactful startups.",
+      images: [
+        "./images/e-cell-nirma-1.jpg",
+        "./images/e-cell-nirma-2.jpg",
+        "./images/e-cell-nirma-3.jpg",
+      ],
+    },
+    {
+      id: "event-10",
+      title: "National Startup Week - Ahmedabad",
+      description:
+        "Celebrating National Startup Week with inspiring events, pitches, powerful collaborations, and meaningful connections shaping Ahmedabad’s unstoppable startup ecosystem.",
+      images: [
+        "./images/AU-logo.jpg",
+        "./images/AU-1.jpg",
+        "./images/AU-2.jpg",
+        "./images/AU-3.jpg",
+      ],
+    },
     {
       id: "event-1",
       title: "Indian Institute of Management, Ranchi.",
@@ -94,29 +127,6 @@ const Events = () => {
         "./images/lj-logo.jpg",
         "./images/lj-1.jpg",
         "./images/lj-2.jpg",
-      ],
-    },
-    {
-      id: "event-9",
-      title: "E-Cell, Nirma University",
-      description:
-        "Build Your Startup 8.0 empowered aspiring entrepreneurs through ideation, mentoring, business modelling and pitching, transforming innovative ideas into impactful startups.",
-      images: [
-        "./images/e-cell-nirma-1.jpg",
-        "./images/e-cell-nirma-2.jpg",
-        "./images/e-cell-nirma-3.jpg",
-      ],
-    },
-    {
-      id: "event-10",
-      title: "National Startup Week - Ahmedabad",
-      description:
-        "Celebrating National Startup Week with inspiring events, pitches, powerful collaborations, and meaningful connections shaping Ahmedabad’s unstoppable startup ecosystem.",
-      images: [
-        "./images/AU-logo.jpg",
-        "./images/AU-1.jpg",
-        "./images/AU-2.jpg",
-        "./images/AU-3.jpg",
       ],
     },
   ];

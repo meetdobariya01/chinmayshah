@@ -1,4 +1,5 @@
-import React from "react";
+import { useEffect } from "react";
+import { useLocation } from "react-router-dom";
 import Header from "../../component/header/header";
 import Footer from "../../component/footer/footer";
 import { Container, Row, Col } from "react-bootstrap";
@@ -73,7 +74,17 @@ const sectionData = [
   //   link: "https://www.startupindia.gov.in/content/sih/en/state-startup-policies/Karnataka-state-policy.html",
   // },
 ];
+
 const Links = () => {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: "instant", // or "smooth"
+    });
+  }, [pathname]);
   return (
     <div>
       <Header />

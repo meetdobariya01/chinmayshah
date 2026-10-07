@@ -8,7 +8,7 @@ import Footer from "../../component/footer/footer";
 const ventures = [
   {
     name: "Startup Steroids",
-    logo: "./images/startups.png",
+    logo: "/images/startups.png",
     desc: "Empowering early-stage founders with investor access and global exposure.",
     link: "https://startupsteroid.in",
   },
@@ -36,12 +36,18 @@ const ventures = [
     desc: "AI accounting automation for businesses",
     link: "https://accomation.io",
   },
-  // {
-  //   name: "Future Initiatives",
-  //   logo: "https://via.placeholder.com/120x120?text=Future+Initiatives",
-  //   desc: "Driving next-gen innovation and ecosystem acceleration programs.",
-  //   link: "https://futuresinitiative.org",
-  // },
+  {
+    name: "Native91",
+    logo: "./images/native.png",
+    desc: "Discover Exceptional Indian Brands, Thoughtfully Curated For Your Lifestyle",
+    link: "https://native91.com",
+  },
+  {
+    name: "Future Initiatives",
+    logo: "./images/logo-horizontal.png",
+    desc: "Secure, Simple E-Signatures for Modern Businesses and Growing Teams",
+    link: "https://accordsign.app/",
+  },
 ];
 
 export const Ventures = () => {

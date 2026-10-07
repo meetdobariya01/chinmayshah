@@ -21,6 +21,9 @@
   background: radial-gradient(circle at 30% 30%, rgba(13, 110, 253, 0.1), transparent 70%);
   animation: floatGlow 6s ease-in-out infinite alternate;
 }
+.contact-icon{
+  font-size: 40px;
+}
 
 @keyframes floatGlow {
   from {
