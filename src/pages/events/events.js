@@ -187,9 +187,9 @@ const Events = () => {
                     {event.description}
                   </p>
 
-                  <p className="text-secondary" style={{ fontSize: "16px" }}>
+                  {/* <p className="text-secondary" style={{ fontSize: "16px" }}>
                     {event.date}
-                  </p>
+                  </p> */}
                 </div>
 
                 {/* ============================================
