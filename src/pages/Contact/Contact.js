@@ -95,7 +95,7 @@ const Contact = () => {
       <Header />
 
       {/* hero section */}
-      <section className="hero-section d-flex align-items-center text-center text-white">
+      <section className="hero-section-contact d-flex align-items-center text-center text-white">
         <div className="container">
           <motion.h1
             className="fw-bold display-5 mb-3"

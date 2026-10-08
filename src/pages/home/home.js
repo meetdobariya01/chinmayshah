@@ -130,7 +130,7 @@ export const Home = () => {
       <Header />
       {/* first section */}
 
-      <section className="hero-section position-relative text-white overflow-hidden">
+      <section className="hero-section-home position-relative text-white overflow-hidden">
         {/* Animated background overlay */}
         <div className="animated-bg"></div>
 

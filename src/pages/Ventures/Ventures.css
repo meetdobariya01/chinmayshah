@@ -1,6 +1,6 @@
 .hero-title-section {
   position: relative;
-  height: 100vh;
+  height: 30vh;
   background: linear-gradient(135deg, #0a0f1a, #142b46);
   overflow: hidden;
 }
